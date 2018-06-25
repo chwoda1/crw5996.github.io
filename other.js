@@ -60,7 +60,7 @@ function resize() {
 function fontSize(size , base) {
 
 	var ratio = size / base;
-	var size = canvas.width * ratio;
-
-	return size + 'px Oswald'
+	var newsize = canvas.width * ratio;
+	console.log(canvas.width)
+	return newsize + 'px Oswald'
 }
