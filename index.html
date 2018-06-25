@@ -93,7 +93,9 @@
 				}
 			
 			}
-
+			
+			var list = document.getElementById("game_canvas");
+			list.addEventListener("touchstart",() => { _jump(); }, false);
 			document.addEventListener("keydown" , e => processKey(e.key , 1)); 
 			document.addEventListener("keyup" , e => processKey(e.key , 0)); 
 			window.addEventListener('resize' , () => {resize();});
