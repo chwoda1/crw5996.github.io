@@ -57,3 +57,10 @@ function resize() {
 
 }
 
+function fontSize(size , base) {
+
+	var ratio = size / base;
+	var size = canvas.width * ratio;
+
+	return size + 'px Oswald'
+}

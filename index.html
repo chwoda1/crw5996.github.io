@@ -97,7 +97,9 @@
 			document.addEventListener("keydown" , e => processKey(e.key , 1)); 
 			document.addEventListener("keyup" , e => processKey(e.key , 0)); 
 			window.addEventListener('resize' , () => {resize();});
-
+			
+			var font_base = 30;
+			var font_default = 1000;
 			var text_pos = canvas.width * .35; 
 			var speed = 150; 
 			var text_y = 0; 
@@ -143,7 +145,7 @@
 				if (score > hiScore)
 					hiScore = score; 
 
-				context.font = "30px Oswald"; 
+				context.font = fontSize(font_base, font_default); 
 				context.fillStyle = 'black'; 
 				context.fillText("SCORE: " + score , canvas.width * .01 , canvas.height * .1); 
 				context.fillText("HIGHSCORE: " + hiScore , canvas.width * .01 , canvas.height * .15); 
